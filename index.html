@@ -20,13 +20,22 @@
 
     <!-- EVEN OR ODD -->
     <div class="title">Chi vince?</div>
-    <label for="even-or-odd">Scegli se pari o dispari:</label>
+    <label for="even-or-odd">Scegli se, secondo te, la somma sarà pari o dispari:</label>
         <select name="even-or-odd" id="even-or-odd">
-            <option></option>
-            <option value="1">Pari</option>
-            <option value="2">Dispari</option>
+            <option value="pari">Pari</option>
+            <option value="dispari">Dispari</option>
         </select>
     <button id="play-button">Gioca!</button>
+
+    <div id="number-input-container" class="display-none">
+        <label for="number-input" id="number-input-label">Inserisci un numero da 1 a 5:</label><br>
+        <input type="number" id="number-input" name="number-input">
+        <button id="winner-button">Scopri chi ha vinto!</button>
+    </div>
+
+    <div id="number-output" class="display-none">
+        ciao
+    </div>
 
     <!-- js script -->
     <script type="text/javascript" src="js/script.js"></script>

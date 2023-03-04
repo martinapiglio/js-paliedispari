@@ -59,3 +59,66 @@ function isPalindrome(word) {
 EVEN OR ODD
 */
 
+let playButton = document.getElementById('play-button');
+let numberInputContainer = document.getElementById('number-input-container');
+
+playButton.addEventListener('click', function() {
+    
+    numberInputContainer.classList.remove('display-none');
+
+});
+
+let winnerButton = document.getElementById('winner-button');
+let numberOutput = document.getElementById('number-output');
+
+winnerButton.addEventListener('click', function() {
+
+    let userNumber = parseInt(document.getElementById('number-input').value);
+
+    if (isNaN(userNumber) || (userNumber <= 0) || (userNumber > 5)) {
+
+        alert('Per favore, inserisci un numero da 1 a 5');
+
+    } else {
+
+        let machineNumber = randomNumberBetween(1, 5);
+    
+        let sum = addNumbers(userNumber, machineNumber);
+        let output = isEvenOrOdd(sum);
+        let evenOrOdd = document.getElementById('even-or-odd').value;
+    
+        let textOutput;
+        
+        if (output == evenOrOdd) {
+            textOutput = 'Hai vinto!';
+        } else {
+            textOutput = 'Hai perso!';
+        } 
+    
+        numberOutput.classList.remove('display-none');
+        numberOutput.innerText = 'Tu hai scelto ' + userNumber + ' e il PC ha scelto ' + machineNumber + '. La somma è ' + output + '. ' + textOutput;
+    
+    }
+
+});
+
+//ADD NUMBERS FUNCTION ---------------------------------------
+function addNumbers(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+}
+
+//RANDOM NUMBER FUNCTION ---------------------------------------
+function randomNumberBetween(min, max) {
+    let random = Math.floor(Math.random() * (max - min + 1) + min);
+    return random;
+}
+
+//EVEN-ODD NUMBER FUNCTION ---------------------------------------
+function isEvenOrOdd(number) { 
+    if(number % 2 == 0) {
+        return 'pari';
+    } else {
+        return 'dispari';
+    };
+};

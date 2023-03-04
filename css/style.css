@@ -14,8 +14,16 @@
     height: 30vh;
 }
 
-#word-output {
+#word-output,
+#number-output {
     margin-top: .5em;
     font-weight: bold;
 }
 
+#number-input-container {
+    margin-top: .5em;
+}
+
+.display-none {    
+    display: none;
+}

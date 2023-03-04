@@ -28,13 +28,34 @@ wordButton.addEventListener('click', function() {
 //PALINDROME FUNCTION ---------------------------------------
 function isPalindrome(word) {
 
+    let isPalindrome = true;
+
     for (let i = 0; i < word.length; i++) {
 
         if (word[i] == word[word.length - i - 1]) {
-            return ('La parola è palindroma');
-        }; 
+            
+            console.log(word[i]);
+            console.log(word[word.length - i - 1]);
+
+        } else {
+
+            console.log(word[i]);
+            console.log(word[word.length - i - 1]);
+            isPalindrome = false;
+
+        };
 
     };
 
-    return ('La parola non è palindroma');
-}
+    if (isPalindrome) {
+        return ('La parola è palindroma');
+    } else {
+        return ('La parola non è palindroma');
+    };
+
+};
+
+/*
+EVEN OR ODD
+*/
+

@@ -10,13 +10,23 @@
 </head>
 <body>
     <!-- PALINDROME -->
-    <div id="word-title" class="word-elements">La parola è palindroma?</div>
-    <label for="word-input" id="word-input-label" class="word-elements">Inserisci una parola:</label><br>
-    <input type="text" id="word-input" class="word-elements" name="word-input">
-    <button id="word-button" class="word-elements">Scopri!</button>
-    <div id="word-output" class="word-elements"></div>
+    <div id="palindrome">
+        <div class="title">La parola è palindroma?</div>
+        <label for="word-input" id="word-input-label">Inserisci una parola:</label><br>
+        <input type="text" id="word-input" name="word-input">
+        <button id="word-button">Scopri!</button>
+        <div id="word-output"></div>
+    </div>
 
     <!-- EVEN OR ODD -->
+    <div class="title">Chi vince?</div>
+    <label for="even-or-odd">Scegli se pari o dispari:</label>
+        <select name="even-or-odd" id="even-or-odd">
+            <option></option>
+            <option value="1">Pari</option>
+            <option value="2">Dispari</option>
+        </select>
+    <button id="play-button">Gioca!</button>
 
     <!-- js script -->
     <script type="text/javascript" src="js/script.js"></script>

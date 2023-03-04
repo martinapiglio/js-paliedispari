@@ -11,7 +11,6 @@ PALINDROME
     c - let the output be equal to the palindrome function result;
 */
 
-
 //VARIABLES
 let wordInput = document.getElementById('word-input');
 let wordButton = document.getElementById('word-button');
@@ -21,18 +20,7 @@ let wordOutput = document.getElementById('word-output');
 wordButton.addEventListener('click', function() {
 
     let wordEl = wordInput.value;
-
-                //CHECK
-                console.log(wordEl);
-                //CHECK
-
     let wordArray = wordEl.split('');
-
-                //CHECK
-                console.log(wordArray);
-                console.log(wordArray.length);
-                //CHECK
-
     wordOutput.innerText = isPalindrome(wordArray);
 
 });

@@ -19,9 +19,18 @@ let wordOutput = document.getElementById('word-output');
 //BUTTON CLICK
 wordButton.addEventListener('click', function() {
 
-    let wordEl = wordInput.value;
-    let wordArray = wordEl.split('');
-    wordOutput.innerText = isPalindrome(wordArray);
+    let wordEl = wordInput.value.toLowerCase();
+    
+    if ((wordEl == '') || (wordEl == null)) {
+
+        alert('Per favore, inserisci una parola valida');
+
+    } else {
+
+        let wordArray = wordEl.split('');
+        wordOutput.innerText = isPalindrome(wordArray);
+
+    };    
 
 });
 
